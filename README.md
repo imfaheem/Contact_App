@@ -1,27 +1,14 @@
-# ContactApp
+# Project Introduction
+This App is to List down all the Contacts of the Users and also Display the Emails and other Contact Details for a Specific User.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.0.
+## How To Clone
+Open cmd and Run the command `git clone https://github.com/imfaheem/Contact_App.git` to fetch the complete Project Locally.
+
 
 ## Development server
+- Run command `npm install` to install all the packages and dependencies for the Project. 
+- Run command `ng serve` for a dev server.
+- Open the link on Browser with path `http://localhost:4200/`.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## OR
+Run command `ng serve --o` so that `http://localhost:4200/` will be automatically open in the browser.
