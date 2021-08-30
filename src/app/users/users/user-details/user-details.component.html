@@ -1,0 +1,67 @@
+<section class="user-details p-5">
+    <div class="basic-info d-flex mt-2 m-auto">
+        <div class="img-div me-2">
+            <img src="{{specificUser?.avatar || defaultAvatar}}" alt="User Image">
+        </div>
+        <div class="info-div ms-4">
+            <h2 class="mt-1">{{specificUser?.firstname || fullName}} {{specificUser?.lastname}}</h2>
+            <span>{{specificUser?.designation || post}}</span>
+            <div class="utilities mt-4">
+                <button type="button" class="btn btn-full btn-primary"><em class="fa fa-comments me-2"></em> Message</button>
+                <a class="btn btn-l btn-light"><em class="fa fa-phone"></em></a>
+                <a class="btn btn-l btn-light"><em class="fa fa-upload"></em></a>
+                <a class="btn btn-l btn-light"><em class="fa fa-ellipsis-h"></em></a>
+            </div>
+        </div>
+    </div>
+    <div class="details-info mt-3">
+        <div class="descriptions">
+            <label>Bio</label>
+            <p>{{specificUser?.bio || bio}}.</p>
+        </div>
+        <br>
+        <div class="descriptions">
+            <label>Email</label>
+            <p>
+                <span>{{specificUser?.email_primary || email}} <span class="badge bg-light">Primary</span></span>
+                <span>{{specificUser?.email }}</span>
+            </p>
+        </div>
+        <div class="descriptions">
+            <label>Dial</label>
+            <p>{{specificUser?.dial || dial }}</p>
+        </div>
+        <div class="descriptions">
+            <label>Meeting</label>
+            <p>{{specificUser?.meeting || meeting }}</p>
+        </div>
+        <div class="descriptions">
+            <label>Phone</label>
+            <p>
+                <span>{{specificUser?.phone_primary || phone}} <span class="badge bg-light">Primary</span></span>
+                <span>{{specificUser?.phone}}</span>
+            </p>
+        </div>
+        <div class="descriptions">
+            <label>Social</label>
+            <ul class="list-unstyled">
+                <li class="list-inline-item">
+                    <a href="{{specificUser?.sociallink_fb}}" target="_blank" class="btn btn-l btn-light" title="Facebook"><em class="fa fa-facebook"></em></a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#" class="btn btn-l btn-light" title="Pinterest"><em class="fa fa-pinterest"></em></a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#" class="btn btn-l btn-light" title="Twitter"><em class="fa fa-twitter"></em></a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#" class="btn btn-l btn-light" title="Linkedin"><em class="fa fa-linkedin"></em></a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#" class="btn btn-l btn-light" title="Google"><em class="fa fa-google"></em></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <a class="close-user" (click)="closeTab()">&times;</a>
+</section>

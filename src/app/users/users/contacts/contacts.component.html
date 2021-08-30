@@ -1,0 +1,9 @@
+<div class="app-component flex-box">
+    <div class="contact-section flex-5">
+        <app-contact-bar></app-contact-bar>
+        <app-contact-list (newClass)="getClass($event)"></app-contact-list>
+    </div>
+    <div class="user-details flex-6" [ngClass]="newClass">
+        <app-user-details (removeClass)="closeTab()"></app-user-details>
+    </div>
+</div>

@@ -1,0 +1,154 @@
+// User Details Section Styles and Settings
+@import './../../../../styles.scss';
+
+.user-details{
+    @include on-sm-down{
+        padding: 15px !important;
+    }
+}
+
+// Basic Info Section for User Styling
+.basic-info{
+    @include on-xl-down{
+        padding: 0 30px;
+        width: 480px;
+    }
+    @include on-lg-down{
+        width: 380px;
+        padding: 0;
+    }
+    @include on-md-down{
+        width: 75%;
+    }
+    @include on-sm-down{
+        width: 350px;
+    }
+    padding: 25px 50px;
+    padding-bottom: 0;
+    width: 650px;
+    .img-div{
+        @include on-xxl-down{
+            height: 115px;
+            width: 110px;
+        }
+        @include on-lg-down{
+            border-radius: 20px;
+            height: 105px;
+            width: 100px;
+        }
+        @include on-sm-down{
+            border-radius: 15px;
+            height: 90px;
+            width: 90px;
+        }
+        border-radius: 25px;
+        overflow: hidden;
+        height: 125px;
+        width: 120px;
+        img{
+            width: 100%;
+        }
+    }
+    .info-div span{
+        @include on-xxl-down{
+            font-size: $large-size - 2;
+        }
+        @include on-lg-down{
+            font-size: $large-size - 4;
+        }
+        @include on-sm-down{
+            font-size: $large-size - 5;
+        }
+        font-size: $large-size;
+        color: $secondary;
+    }
+    .utilities{
+        @include on-sm-down{
+            margin-top: 15px !important;
+        }
+    }
+    .btn{
+        @include on-lg-down{
+            margin-right: 5px;
+        }
+        margin-right: 7px;
+    }
+}
+
+// Description Section for User Emails Component
+.descriptions{
+    @include on-xl-down{
+        padding: 12px 0;
+        padding-right: 30px;
+    }
+    @include on-lg-down{
+        padding-right: 0;
+    }
+    padding: 15px 0;
+    padding-right: 70px;
+    display: flex;
+    label{
+        @include on-xxl-down{
+            font-size: $large-size - 2;
+        }
+        @include on-lg-down{
+            min-width: 80px;
+        }
+        @include on-md-down{
+            min-width: 90px;
+        }
+        @include on-sm-down{
+            font-size: $large-size - 4;
+            min-width: 80px;
+        }
+        font-size: $large-size;
+        padding-right: 35px;
+        text-align: right;
+        color: $secondary;
+        min-width: 105px;
+    }
+    p{
+        color: $darker;
+        flex: 1;
+        > span{
+            @include on-lg-down{
+                margin-bottom: 5px;
+            }
+            margin-bottom: 10px;
+            display: block;
+        }
+        .badge{
+            @include on-lg-down{
+                border-radius: 5px;
+                padding: 7px 10px;
+            }
+            @include on-sm-down{
+                font-size: $small-size - 2;
+                border-radius: 4px;
+                padding: 6px 10px;
+            }
+            border-radius: 8px;
+            color: $secondary;
+            padding: 8px 12px;
+            font-weight: 500;
+            float: right;
+        }
+    }
+    ul{
+        margin: 0;
+    }
+}
+
+// Close button for User Details section Hidden
+.close-user{
+    @include on-md-down{
+        display: block;
+    }
+    font-size: $heading + 12;
+    text-decoration: none;
+    position: absolute;
+    cursor: pointer;
+    display: none;
+    right: 15px;
+    top: 0;
+}

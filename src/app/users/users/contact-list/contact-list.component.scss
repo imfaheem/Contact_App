@@ -1,0 +1,148 @@
+// Contact List Section Styles and Settings
+@import './../../../../styles.scss';
+
+.contact-list{
+    @include on-lg-down{
+        padding: 15px 20px;
+    }
+    @include on-sm-down{
+        padding: 12px 18px;
+    }
+    background-color: $bg-color;
+    padding: 25px 35px;
+    padding-bottom: 0;
+}
+
+// Search bar Section Styling
+.search-bar{
+    position: relative;
+    label{
+        @include on-lg-down{
+            text-shadow: none;
+            letter-spacing: 0;
+        }
+        text-shadow: 0 .5px $secondary;
+        letter-spacing: .5px;
+        color: $secondary;
+    }
+    input{
+        @include on-xxl-down{
+            font-size: $large-size - 2;
+        }
+        @include on-lg-down{
+            font-size: $large-size - 3;
+        }
+        @include on-sm-down{
+            font-size: $large-size - 4;
+        }
+        width: 90%;
+        border: none;
+        outline: none;
+        display: block;
+        padding: 5px 0;
+        color: $darker;
+        font-weight: 600;
+        font-size: $large-size;
+        background-color: transparent;
+        border-bottom: 2px solid transparent;
+        &:focus{
+            border-bottom: 2px solid lightskyblue;
+        }
+        &::-webkit-input-placeholder{
+            color: $darker;
+        }
+        &:-ms-input-placeholder{
+            color: $darker;
+        }
+        &::placeholder{
+            color: $darker;
+        }
+    }
+    button{
+        @include on-lg-down{
+            right: 0;
+        }
+        position: absolute;
+        right: 10px;
+        bottom: 0;
+    }
+}
+
+// Contact List Section Styling
+.users-list{
+    min-height: 70vh;
+    > .d-flex{
+        @include on-xl-down{
+            padding: 18px 0 !important;
+        }
+        @include on-sm-down{
+            padding: 15px 0 !important;
+        }
+        border-radius: 10px;
+        padding: 0 5px;
+    }
+    > .d-flex:hover{
+        cursor: pointer;
+    }
+    .details{
+        .user-img{
+            position: relative;
+        }
+        .img{
+            @include on-lg-down{
+                border-radius: 10px;
+                height: 38px;
+                width: 36px;
+            }
+            @include on-sm-down{
+                border-radius: 8px;
+                height: 32px;
+                width: 32px;
+            }
+            border-radius: 12px;
+            overflow: hidden;
+            height: 42px;
+            width: 40px;
+        }
+        img{
+            width: 100%;
+        }
+        .status{
+            @include on-sm-down{
+                font-size: $small-size - 2;
+            }
+            font-size: $small-size;
+            position: absolute;
+            color: $inactive;
+            bottom: -2px;
+            right: -2px;
+            &.false{
+                color: $active;
+            }
+        }
+        .user-info{
+            @include on-lg-down{
+                margin-left: 15px !important;
+            }
+            @include on-sm-down{
+                margin-left: 10px !important;
+            }
+            span{
+                @include on-lg-down{
+                    font-size: $default-size - 1;
+                }
+                @include on-sm-down{
+                    font-size: $default-size - 3;
+                }
+                font-size: $default-size + 1;
+                color: $secondary;
+            }
+        }
+    }
+    a.btn{
+        margin: 0 3px;
+        &:hover{
+            color: $primary;
+        }
+    }
+}

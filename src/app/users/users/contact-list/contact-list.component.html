@@ -1,0 +1,28 @@
+<section class="contact-list">
+    <div class="search-bar">
+        <label for="search">Search for a contact</label>
+        <input type="text" id="search" placeholder="Name, email or phone number" />
+        <button class="btn btn-transparent"><em class="fa fa-search"></em></button>
+    </div>
+    <div class="users-list">
+        <div class="d-flex justify-content-between pt-4 pb-4" *ngFor="let items of users" (click)="getData(items.id)">
+            <div class="details d-flex">
+                <div class="user-img">
+                    <div class="img">
+                        <img src="{{items.avatar}}" alt="User Image" />
+                    </div>
+                    <em class="fa fa-circle status {{items.status}}"></em>
+                </div>
+                <div class="user-info ms-4">
+                    <h4>{{items.firstname}} {{items.lastname}}</h4>
+                    <span>{{items.designation}}</span>
+                </div>
+            </div>
+            <div class="actions">
+                <a class="btn btn-light"><em class="fa fa-comments"></em></a>
+                <a class="btn btn-light"><em class="fa fa-phone"></em></a>
+                <a class="btn btn-light"><em class="fa fa-ellipsis-h"></em></a>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,30 @@
+/* ----- Contacts Component Styles ----- */
+@import './../../../../styles.scss';
+
+.app-component{
+    @include on-md-down{
+        background-color: $bg-color;
+        display: block;
+    }
+    min-height: 100vh;
+    .contact-section{
+        background-color: $bg-color;
+    }
+    .user-details{
+        @include on-md-down{
+            transition: all .5s ease-in-out;
+            background-color: $basic;
+            position: fixed;
+            height: 100vh;
+            right: -100%;
+            width: 100%;
+            top: 0;
+        }
+        &.on-active{
+            @include on-md-down{
+                transition: all .5s ease-in-out;
+                right: 0;
+            }
+        }
+    }
+}

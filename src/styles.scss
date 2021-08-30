@@ -1,0 +1,190 @@
+/* ========== Default App Styles and Settings ========== */
+
+// Media Queries Mixins for Responsiveness
+$xs-down: 480px;
+$sm-down: 575px;
+$md-down: 767px;
+$lg-down: 991px;
+$xl-down: 1200px;
+$xxl-down: 1400px;
+
+@mixin on-xs-down{ @media (max-width: $xs-down){ @content; } }
+@mixin on-sm-down{ @media (max-width: $sm-down) { @content; } }
+@mixin on-md-down{ @media (max-width: $md-down) { @content; } }
+@mixin on-lg-down{ @media (max-width: $lg-down) { @content; } }
+@mixin on-xl-down{ @media (max-width: $xl-down) { @content; } }
+@mixin on-xxl-down{ @media (max-width: $xxl-down) { @content; } }
+
+
+// Font-Sizes Variables
+$default-size: 14px;
+$heading: $default-size + 10;
+$large-size: $default-size + 3;
+$small-size: $default-size - 2;
+
+
+// Color Variable
+$basic: #ffffff;
+$light: #f1f1f1;
+$darker: #222222;
+$active: #28c345;
+$primary: #6b59cc;
+$bg-color: #faf9ff;
+$inactive: #f6933e;
+$secondary: #8083A3;
+
+
+*{
+    @include on-lg-down{
+        font-size: $default-size - 1;
+    }
+    font-size: $default-size;
+    color: $darker;
+    padding: 0;
+    margin: 0;
+}
+
+
+// Flex Container Styles
+.flex-box{
+    display: flex;
+    > div{
+        flex: 1;
+    }
+    .flex-2{
+        flex: 2;
+    }
+    .flex-3{
+        flex: 3;
+    }
+    .flex-4{
+        flex: 4;
+    }
+    .flex-5{
+        flex: 5;
+    }
+    .flex-6{
+        flex: 6;
+    }
+}
+
+
+// Headings Sizes Styles
+h2{
+    @include on-xxl-down{
+        font-size: $heading - 3;
+    }
+    @include on-lg-down{
+        font-size: $heading - 6;
+    }
+    @include on-sm-down{
+        font-size: $heading - 8;
+    }
+    font-size: $heading;
+    font-weight: 600;
+    color: $darker;
+}
+
+h4{
+    @include on-xxl-down{
+        font-size: $large-size - 2;
+    }
+    @include on-lg-down{
+        font-size: $large-size - 4;
+    }
+    @include on-sm-down{
+        font-size: $large-size - 5;
+    }
+    font-size: $large-size;
+    font-weight: 600;
+    color: $darker;
+}
+
+
+// Icon Buttons Styles
+.btn{
+    @include on-xl-down{
+        height: 36px;
+        width: 37px;
+    }
+    @include on-lg-down{
+        border-radius: 7px;
+        height: 34px;
+        width: 35px;
+    }
+    @include on-sm-down{
+        border-radius: 5px;
+        height: 32px;
+        width: 32px;
+    }
+    transition: all .3s ease-in-out;
+    box-shadow: none !important;
+    border: 1px solid $light;
+    background-color: $basic;
+    justify-content: center;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 5px 10px;
+    color: $secondary;
+    outline: none;
+    height: 37px;
+    width: 38px;
+    em{
+        font-size: inherit;
+        color: inherit;
+    }
+    &:hover{
+        background-color: $light;
+    }
+    &.btn-primary{
+        border: 1px solid $primary;
+        background-color: $primary;
+        color: $basic;
+        &:hover{
+            background-color: transparent;
+            color: $primary;
+        }
+    }
+    &.btn-transparent{
+        background-color: transparent;
+        border: none;
+    }
+    &.btn-l{
+        @include on-xl-down{
+            font-size: $large-size - 2;
+            height: 40px;
+            width: 41px;
+        }
+        @include on-lg-down{
+            font-size: $large-size - 4;
+            height: 36px;
+            width: 38px;
+        }
+        @include on-sm-down{
+            font-size: $large-size - 5;
+            border-radius: 5px;
+            height: 34px;
+            width: 34px;
+        }
+        font-size: $large-size;
+        height: 42px;
+        width: 43px;
+    }
+    &.btn-full{
+        @include on-xl-down{
+            font-size: $large-size - 2;
+        }
+        @include on-lg-down{
+            font-size: $large-size - 3;
+        }
+        @include on-sm-down{
+            font-size: $large-size - 4;
+            padding: 6px 16px;
+        }
+        font-size: $large-size;
+        padding: 7px 18px;
+        height: inherit;
+        width: inherit;
+    }
+}
